@@ -1,0 +1,11 @@
+sudo apt update //to get update
+sudo apt-get update 
+sudo apt upgrade //to install updates
+sudo su //root terminal
+
+ls //files and folders of existing directory
+cd foldername //enter the folder **case sensitive
+cd "folder name"
+cd .. //go back to root folder
+mkdir "directory name" or mkdir directoryname //create directory
+rmdir "directory name" or rmdir directoryname //remove directory

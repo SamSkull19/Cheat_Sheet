@@ -1,0 +1,80 @@
+import numpy as np
+
+#Array -
+1. np.array(list)
+2. array_name.shape [array in 1D or 2D]
+3. np.array(list1+list2)
+4. array_name.astype('str'/'int'/'float') [Change values type]
+5. np.copy(array_name)
+6. np.append(a,b)
+
+
+#Not A Number(NAN) & Infinity(INF) -
+1. np.nan == np.nan
+2. np.inf == np.inf
+3. arr[][] = np.nan
+4. arr[][] = np.inf
+5. np.isnan(array_name) [To check for nan]
+6. np.isinf(array_name) [To check for inf]
+7. new array_name = np.isnan(array_name) | np.isinf(array_name)
+
+
+#Statistical Operations
+1. array_name.mean() [Mean value from array values]
+2. array_name.var() [Variance from array values]
+3. array_name.std() [Standard deviation from array values]
+4. np.median(array_name) [Median value from array values]
+5. array_name.max()
+6. array_name.min()
+
+
+#Shape(),Reshape(),Ravel() and Flatten()
+1. array_name.shape
+2. array_name.reshape(row,column) [Array reshape degree must be same]
+3. array_name.ravel() [Convert 2D array into 1D array]
+4. array_name.flatten() [Convert 2D array into 1D array]
+
+
+#Sequence,Repetition and Random Number
+1. np.arange(Start,End,Difference)
+2. np.arange(Start,End, datatype = 'float/int/str')
+3. np.linspace(Start,End,number of digit) [It returns the number of digit between 2 numbers]
+4. np.logspace(Start,End,Difference)
+5. np.zeros([rows,columns])
+6. np.ones([rows,columns])
+7. np.tile([rows,columns],repetations num) [repeat according to list order]
+8. np.repeat([rows,columns],repetations num) [repeat according to values order in a list]
+9. np.random.rand(rows,columns) [generates random float number in between 0-1]
+10. np.random.randint(Start,End,[rows,columns]) [generates random int number in between]
+11. np.random.seed(1) [fixed values in randomly generated in an array]
+12. np.unique(array_name) [shows uniques values]
+13. np.unique(array_name, return_counts = True) [count returns digits number]
+
+
+#Where
+1. np.where(Condition) [np.where(arr>10)]
+2. array_name.argmax()
+3. array_name.argmin()
+
+
+#File Read and Write
+1. np.savetxt('filename.csv',array_name, delimiter=',')
+2. np.loadtxt('file_name.csv', delimiter=',')
+3. np.save('file_name.npy',array_name)
+4. np.load('file_name.npy')
+5. np.savez('file_name.npz',array_name)
+6. np.load('file_name.npy')
+7. np.load('file_name.npy').files
+ 
+
+#Concatenate and Sorting
+1. np.concatenate([arr1,arr2],axis = 0) [Concatenate vertically][both array size should be same]
+2. np.concatenate([arr1,arr2],axis = 1) [Concatenate horizontally]
+3. np.vstack([arr1,arr2]) [Concatenate vertically]
+4. np.hstack([arr1,arr2]) [Concatenate horizontally]
+5. array_name.sort()
+6. array_name.sort(axis = 1)
+
+#Working with Dates
+1. np.datetime64('2020-12-01 23:34:23')
+2. np.timedelta64(1, 'D/m') [time chunk]

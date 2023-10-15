@@ -1,0 +1,34 @@
+String Functions
+
+1. upper() - convert lowercase into uppercase
+2. isupper() - return true if all letters are in uppercase else return false
+3. lower() / casefold() - convert uppercase into lowercase 
+4. islower() - return true if all letters are in lowercase else return false
+5. len() - return length of string
+6. replace('target value','new value') - if any word or letter need to be replaced 
+7. index('target value',starting index,ending index) - find out the index of target value
+8. count('target value') - count the value exist in a string
+9. find('target value',starting index,ending index) - find out the position of target value. Will return -1 if the value is not found
+10. capitalize() - convet lowercase fisrt letter of the string into uppecase
+11. swapcase() - swap lowercase into uppercase and uppercase into lowercase in a single string
+12. title() - convert all lowercase letter of every word into uppercase in a single string
+13. isdigit() - checks if there is any digit in a string
+14. split()[index] - will split every word in a list 
+15. center(value) - value is for how much it will go in center
+
+
+
+List Functions
+
+1. insert(index,new value) - add new value
+2. index(value) - find out the index of target value
+3. clear() - delete all values in a list
+4. copy() - copies all values from one list from another list
+5. extend(list which will be added) - merge two list
+6. append(value) - add value in a list at the end of list
+7. count('target value') - count the value exist in a string
+8. sort() - sort items in list 
+9. pop(index) - returns and removes an element at the given index
+10. remove('target value') - remove an item from list
+11. reverse() - reverse the order of the list items
+

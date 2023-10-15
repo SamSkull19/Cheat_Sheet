@@ -1,0 +1,182 @@
+1. import seaborn as sns
+2. import matplotlib.pyplot as plt
+3. %matplotlib inline
+
+
+
+#Random Number Genarator
+1. from numpy.random import randn, randint, uniform, sample
+
+2. df = pd.DataFrame(randn(1000), index = pd.date_range('2023-10-11',periods = 1000), columns = ['col_name'])  [Random Number Genaration]
+
+3. ts = pd.Series(randn(1000), index = pd.date_range('2023-11-11', periods = 1000)) [Series * in series we can not add columns]
+
+4. ts = ts.cumsum() [For series]
+
+5. ts.plot(figsize = (h,v)) [h = horizontal values, v = vertical values]
+
+7. df['Col_name'] = df['Col_name'].cumsum() [For dataframe]
+
+
+
+
+#Line Plot
+
+1. ts.plot()
+
+2. df.plot(figsize = (h,v))
+
+3. name = sns.load_dataset('file_name') [Seaborn dataset import] [name = dataset_name]
+
+4. dataset_name.plot(figsize = (30,20))
+
+5. dataset_name.plot(legend = False, figsize = (20,10), logy = True) [legend false means legend will not be shown in chart and logx & logy is used for log scale]
+
+6. x = dataset_name.drop(labels=['Col_name','Col_name'], axis = 1) [For dropping columns and keeping rest of the columns at x axis]
+
+7. y = dataset_name[[''Col_name','Col_name'']]
+
+8. ax = x.plot()
+
+9. y.plot(figsize = (20,10), secondary_y = True, ax=ax)
+
+
+
+
+#Bar Plot
+
+1. df = dataset_name.drop(['Col_name'], axis = 1) [For dropping columns]
+
+2. df.iloc[0] [Getting specific index values only]
+
+3. df.iloc[0].plot(kind = 'bar') [bar plot for index 0]
+
+4. df.iloc[0].plot.bar() [bar plot for index 0]
+
+5. df.plot.bar() [bar plot for whole dataset]
+
+6. df.plot(kind = 'bar')
+
+7. dataset_name['col_name'].plot(kind = 'hist') [histogram is used for categorial data]
+
+
+
+
+#Stacked Plot
+
+1. df = pd.DataFrame(randn(row_number,col_number), columns = ['Col_name','Col_name','Col_name',...]) [col_name is to specify number of columns taken in a DataFrame]
+
+2. df.plot.bar(stacked = True) [Stacked plot vertically]
+
+3. df.plot.barh(stacked = True) [Stacked plot horizontally]
+
+
+
+
+#Histogram 
+
+1. df = sns.load_dataset('name') 
+
+2. df.plot.hist() [histogram plot]
+
+3. df.plot(kind = 'hist')
+
+4. df.plot(kind = 'hist', bins = 50) [bins is Width of lines in an histogram]
+
+5. df.plot(kind = 'hist', bins = 50, stacked = True)
+
+6. df.plot(kind = 'hist', bins = 50, stacked = True, orientation = 'horizontal') [horizontal histogram plot]
+
+7. df.diff().hist() [Diffrence of every columns]
+
+8. df.hist() [For separate histogram for every columns]
+
+9. df.hist(color = 'r', alpha = 0.5)
+
+10. plt.show()
+
+
+
+#Box plot
+
+1. df.plot(kind = 'box', figsize = (10,5))
+
+2. df.describe() [generate a statistical summary of a DataFrame]
+
+3. df.plot(kind = 'box', figsize = (10,5), vert = False)
+
+4. df.plot.box()
+
+
+
+#Area and Scatter plot
+
+1. df.plot(kind = 'area')  [Area plot]
+
+2. df.plot(kind = 'area', stacked = False, alpha = 0.6)
+
+3. df.plot.scatter(x = 'col_name', y = 'col_name')  [Scatter plot, x = x-axis column & y = y-axis column]
+
+4. df.plot.scatter(x = 'col_name', y = 'col_name', c = 'col_name')[c values specifies the intensity of given column]
+
+5. ax = df.plot.scatter(x = 'col_name', y = 'col_name', label = 'width') [taking column values in x-axis]
+
+6. df.plot.scatter(x = 'col_name', y = 'col_name', ax=ax, color = 'r')[merging 2 columns with each other]
+
+
+
+
+#Hex and Pie plot
+
+1. df.plot.hexbin(x = 'col_name', y = 'col_name')  [Hex plot]
+
+2. df.plot.hexbin(x = 'col_name', y = 'col_name', gridsize = 10, c = 'col_name') [gridsize increases plot plain sizes]
+
+3. df.iloc[3].plot.pie(figsize = (5,5)) [Pie plot]
+
+4. d = df.head().T [Swap columns with index and columns become index]
+
+5. d.plot.pie(subplots = True, figsize = (20,20))
+
+6. plt.show()
+
+7. d.plot.pie(subplots = True, figsize = (20,20), fontsize = 24)
+
+8. plt.show()
+
+9. d.plot.pie(subplots = True, figsize = (20,20), fontsize = 24, autopct = '%.2f')
+
+10. plt.show()
+
+11. series = pd.Series([0.2]*4, index = ['a','b','c','d'], name = 'Pie Plot') [series for 80% data in pie plotted]
+
+12. series.plot.pie()
+
+
+
+
+#Scatter Matrix and Subplots
+
+1. from pandas.plottin import scatter_matrix
+
+2. scatter_matrix(df, figsize = (8,8), diagonal = 'kde', color = 'r') 
+
+[kernel density estimation (KDE). The purpose of the KDE is to estimate an unknown probability density function given data sampled from it.]
+
+3. df.plot(subplots = True) [Subplots]
+   plt.show()
+
+4. df.plot(subplots = True, sharex = False) ['Sharex' to show axis in all subplots]
+
+5. plt.tight_layout() [To separate all overlaped plots]
+
+6. df.plot(subplots = True, sharex = False, layout = (2,2), figsize = (5,5)) [ layout - Show plots on a matrix form [row,column]]
+
+
+
+
+
+
+
+
+

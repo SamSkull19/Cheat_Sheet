@@ -1,0 +1,31 @@
+C:\\User\\sifat\\anaconda3\\envs\rasabot
+
+python --version
+
+conda --version
+
+rasa --version
+
+C:\Users\sifat\anaconda3\envs\chatbot\python.exe
+
+conda create -n chatbot python=3.7
+conda activate chatbot
+
+python -m pip uninstall pip
+python -m ensurepip
+python -m pip install -U pip
+
+pip install rasa
+
+cd D:\\rasa_chat_bot
+
+rasa -h
+rasa init
+
+pip install rasa-x --extra-index-url https://pypi.rasa.com/simple
+
+rasa train
+rasa shell
+
+python migrate_tracker_store.py
+rasa x

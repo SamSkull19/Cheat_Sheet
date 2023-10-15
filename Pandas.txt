@@ -1,0 +1,64 @@
+import pandas as pd
+
+#DataFrame and Series
+1. data = {'Name' : ['a','s','d'], 'Veg': ['x','y','z']}  [Dictionary]
+2. pd.DataFrame(data)
+3. df = pd.DataFrame(data)
+4. df['Name']
+5. import pandas as pd
+	dic={1:'a',2:'b'}
+	x=pd.DataFrame(list(dic.items()),columns=['Key','Value'])
+
+#File Read and Writing
+1. pd.read_csv('filename.csv') [File read]
+2. df = pd.read_csv('filename.csv')
+3. df.head() [First 5 lines will be shown]
+4. df.head(Values) [Number of times will show that value is given]
+5. df.tail() [Last 5 lines will be shown]
+6. df = pd.read_csv('filename.csv', usecols=['Col_Name','Col_Name'])
+7. df.set_index('Col_Name')
+8. df.to_csv('df.csv') [File write]
+
+
+#Info, Shape, Duplicated, and Drop
+1. df.info()
+2. df.describe() [Uniques info about dataframe]
+3. df.shape [Array size]
+4. df.duplicated() [Checks duplicate values return true for it]
+5. df.duplicated().sum() [Returns number of duplicate values]
+6. df.duplicated(subset=['Col_name']).sum()
+7. df.drop_duplicated() [Duplicate values removed]
+8. df.drop(['col_name'], axis = 1) [Dropping columns]
+9. df.drop(labels=['Col_name','Col_name'], axis = 1) [Dropping columns]
+10. df.drop([rows_values]) [Dropping rows]
+
+
+#Colmuns
+1. df.columns
+2. df.columns = ['Col_Name', 'Col_Name']
+3. df.rename(column = {'Name':'name', 'Team':'team'})
+
+
+#NaN and NUll Values
+1. df.isnull() [Checks Null values return true for it]
+2. df.isnull().sum()
+3. df.isna() [Checks NaN values return true for it]
+4. df.isna().sum()
+5. df.dropna()
+6. df.dropna().isna().sum()
+7. df.dropna(axix = 1) [Drop columns]
+
+
+#Imputation
+1. df.fillna(Value) [Value will be fill according to its given number]
+2. df.fillna('col_name') [Column name can be used for filling specific column]
+3. new_col = df['Old_col']
+
+
+#Lambda Function
+1. x = lambda a: a*a
+2. df['col_name'].apply(lambda x: x if x == x else y)
+3. df['Salary'].apply(lambda x:x if x==x else 'Salary')
+
+
+

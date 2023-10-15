@@ -1,0 +1,91 @@
+#  Global User Settings:
+git config --global user.name "abc"
+git config --global user.email "xyz@mail.com"
+git config --list
+
+
+# Local User Settings:
+git config user.name "abc"
+git config user.email "xyz@mail.com"
+git config --list
+
+
+# Repository:
+mkdir directory_name [make directory]
+cd directory_location [change directory]
+
+
+Git Blueprint:
+
+Working Directory -> Stagging Area -> Local Repository -> Remote Repository
+Test_Project      -> git add	   -> git commit       -> git push
+
+
+# Git Folder:
+git init [Initializing a folder for git]
+git status
+
+
+#Stagging & Unstagging 
+
+git add file_name
+git add .
+git diff [to check modified terms]
+git restore file_name [Go back to previous version of files]
+
+
+#Local Repository
+
+git commit
+git commit -m "Message"
+git log [check the commit details]
+git log --oneline
+git checkout ID [shift commit id]
+git checkout master [checkout is used to change commit id]
+git show commit_id / git show / git show HEAD
+git revert / git checkout / git reset / git clean / git rm
+
+#Backtrack
+
+git reset --soft HEAD^ [Local Repository to Stagging Area]
+git reset --hard HEAD^ [Reset all changes]
+git reset HEAD^ [Local Repository to Working directory]
+
+
+#Secure Shell (ssh)
+
+ssh-keygen -t ed25519 -C "sifatsamin19@gmail.com"
+cat ~/.ssh/id_ed25519.pub
+
+#Clone Repository
+
+git clone \link\
+
+
+#Remote repository
+
+git remote -v
+git remote add origin https://github.com/SamSkull19/test_sam.git
+git branch -M main
+git push -u origin main
+git push origin 
+git pull origin main
+git pull origin
+
+
+git rm --cached filename
+
+#Branching and Merging
+
+git branch [Branch check]
+git branch -r [Remote branch check]
+git branch -a [Local branch check]
+git branch Branch_Name [Branch create]
+git checkout Branch_Name [Switch branch]
+git merge Branch_Name
+git branch -d Branch_Name [Delete Branch]
+git push -u origin Branch_Name [Push Branch to Remote Repository]
+git checkout -b Branch_Name [Create new branch and check the branch]
+ 
+
+
