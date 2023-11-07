@@ -66,14 +66,17 @@ git clone \link\
 
 git remote -v
 git remote add origin https://github.com/SamSkull19/test_sam.git
-git branch -M main
+git branch -M main [Branch Rename]
 git push -u origin main
 git push origin 
 git pull origin main
 git pull origin
+git push -u origin master
+git pull origin master
 
 
 git rm --cached filename
+
 
 #Branching and Merging
 
